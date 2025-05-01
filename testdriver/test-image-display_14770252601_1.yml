@@ -1,0 +1,16 @@
+version: 4.2.29
+session: 681308549741be1d433e9c2c
+steps:
+  - prompt: Assert that the images on the main page are displayed correctly.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: assert
+        expect: the image of a car transport truck with cars is displayed
+  - prompt: Click on the main image.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: image of a car transport truck with cars
+        action: click
