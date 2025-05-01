@@ -1,0 +1,15 @@
+version: 4.2.29
+session: 681308559741be1d433e9c30
+steps:
+  - prompt: Click on "Get Instant Quote".
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Get Instant Quote
+        description: button for getting an instant quote on the webpage
+        action: click
+  - prompt: Assert that the quote form is displayed correctly.
+    commands:
+      - command: assert
+        expect: the "Delivery Calculator" form is displayed
