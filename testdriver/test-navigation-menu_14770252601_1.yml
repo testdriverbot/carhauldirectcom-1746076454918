@@ -1,0 +1,23 @@
+version: 4.2.29
+session: 681308542a2c055834681f1c
+steps:
+  - prompt: Click on "Transportation Services" in the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Transportation Services
+        description: navigation menu option for transportation services
+        action: click
+  - prompt: Assert that the Transportation Services page is loaded.
+    commands:
+      - command: assert
+        expect: >-
+          Expert Transport Solutions for Every Vehicle Type is visible on the
+          page
+  - prompt: Click on "About Us" in the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: wait-for-text
+        text: Transforming Vehicle Transportation Through Technology
