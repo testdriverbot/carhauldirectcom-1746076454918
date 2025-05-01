@@ -1,0 +1,25 @@
+version: 4.2.29
+session: 681308542a2c055834681f1e
+steps:
+  - prompt: Click on "Blog" in the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Blog
+        description: blog link in the navigation menu
+        action: click
+  - prompt: Assert that the Blog page is loaded.
+    commands:
+      - command: assert
+        expect: Welcome to our blog is visible on the page
+  - prompt: Select a blog post.
+    commands:
+      - command: hover-text
+        text: Top 5 Bucket List Road Trips in the U.S.
+        description: blog post title
+        action: click
+  - prompt: Assert that the blog post content is visible.
+    commands:
+      - command: assert
+        expect: Top 5 Bucket List Road Trips in the U.S. content is visible
